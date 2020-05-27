@@ -1,0 +1,57 @@
+.control-panel {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  margin: 50px auto;
+  border: solid 1px var(--color-border);
+  border-radius: 5px;
+  width: 90%;
+  padding: 20px;
+}
+
+.control-panel > div {
+  min-width: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.control-panel > div > * {
+  margin: 0px 5px;
+}
+input {
+  min-width: 25px;
+}
+.control-panel > form {
+  align-self: start;
+  grid-column: 1;
+  grid-row: 2 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.control-panel > :not(form) {
+  grid-column: 2;
+}
+
+.control-panel h1 {
+  text-align: center;
+  grid-column: 1 / 3;
+}
+
+@media only screen and (max-width: 670px) {
+  /* reorder grid to stack all instead of side-by-side columns if below certain screen size */
+  .control-panel > * {
+    grid-column: 1 / 3 !important;
+  }
+}
+
+form > * {
+  margin: 5px 0;
+}
+form > label {
+  grid-column: 1;
+}
+form > input {
+  grid-column: 2;
+}
+form > button {
+  grid-column: 1 / 3;
+}

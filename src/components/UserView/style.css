@@ -1,0 +1,22 @@
+.user-view {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  width: 90%;
+  border: solid 1px var(--color-border);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+  max-height: 50vh;
+}
+.user-view > * {
+  margin: 5px;
+  flex-shrink: 0;
+  min-height: 50px;
+  width: 99%;
+}
+.amount {
+  text-align: center;
+  margin: 0 auto;
+}

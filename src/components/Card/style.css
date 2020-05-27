@@ -1,0 +1,17 @@
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px var(--color-border);
+  transition: box-shadow .15s;
+  box-shadow: 0 1px 1 0 var(--color-border);
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 1px 4px 0 var(--color-border);
+}
